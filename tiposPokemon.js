@@ -5,7 +5,7 @@ export class PokemonFuego extends Pokemon {
         super(nombre, "Fuego", vida, ataque, defensa, velocidad);
     }
 
-    atacar(oponente) {
+    specialAtack(oponente) {
         super.atacar(oponente);
         if (oponente.tipo === "Planta") {
             let dañoExtra = Math.max(5, this.ataque - oponente.defensa);
@@ -21,7 +21,7 @@ export class PokemonPlanta extends Pokemon {
         super(nombre, "Planta", vida, ataque, defensa, velocidad);
     }
 
-    atacar(oponente) {
+    specialAtack(oponente) {
         super.atacar(oponente);
         if (oponente.tipo === "Agua") {
             let dañoExtra = Math.max(5, this.ataque - oponente.defensa);
@@ -37,7 +37,7 @@ export class PokemonAgua extends Pokemon {
         super(nombre, "Agua", vida, ataque, defensa, velocidad);
     }
 
-    atacar(oponente) {
+    specialAtack(oponente) {
         super.atacar(oponente);
         if (oponente.tipo === "Fuego") {
             let dañoExtra = Math.max(5, this.ataque - oponente.defensa);

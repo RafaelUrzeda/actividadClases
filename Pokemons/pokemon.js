@@ -16,4 +16,13 @@ export class Pokemon {
         pokemon.hp -= damage;
         console.log(`${this.name} ataca a ${pokemon.name} y le hace ${damage} de daño`);
     }
+
+    heal() {
+        this.vida += 20;
+        console.log(`${this.nombre} se ha curado 20 puntos de vida.`);
+    }
+
+    showLife() {
+        console.log(`${this.nombre} tiene ${this.vida} puntos de vida.`);
+    }
 }
