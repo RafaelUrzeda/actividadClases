@@ -31,15 +31,19 @@
             justify-content: space-around;
         }
     </style>
+    <script>
+        import { Eevee } from './pokemons.js'; 
+        const eevee = new Eevee();
+    </script>
 </head>
 <body>
     <div id="team1" class="team">
-        <div id="eve" class="pokemon">
-            <h1>Eve</h1>
+        <div id="eevee" class="pokemon">
+            <h1>Eevee</h1>
             <div class="actions">
                 <button type="button">Atacar</button>
                 <button type="button">Curar</button>
-                <button type="button">Motrar vida</button>
+                <button type="button" onclick="eevee.showHealth()">Motrar vida</button>
             </div>
         </div>
         <div id="bulbasaur" class="pokemon">
@@ -47,7 +51,7 @@
             <div class="actions">
                 <button type="button">Atacar</button>
                 <button type="button">Curar</button>
-                <button type="button">Motrar vida</button>
+                <button type="button" onclick="bulbasaur.showHealth()">Motrar vida</button>
             </div>
         </div>
     </div>
@@ -57,7 +61,7 @@
             <div class="actions">
                 <button type="button">Atacar</button>
                 <button type="button">Curar</button>
-                <button type="button">Motrar vida</button>
+                <button type="button" onclick="squirtle.showHealth()">Motrar vida</button>
             </div>
         </div>
         <div id="charmander" class="pokemon">
@@ -65,12 +69,10 @@
             <div class="actions">
                 <button type="button">Atacar</button>
                 <button type="button">Curar</button>
-                <button type="button">Motrar vida</button>
+                <button type="button" onclick="charmander.showHealth()">Motrar vida</button>
             </div>
         </div>
     </div>
-    <script>
-
-    </script>
+    
 </body>
 </html>
