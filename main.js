@@ -18,7 +18,7 @@ function setEvents() {
         Bulbasaur.heal();
     });
     document.getElementById('bulbasaurShowLife').addEventListener('click', () => {
-        alert(`Vida de Bulbasaur: ${Bulbasaur.vida}`);
+        Bulbasaur.showHealth();
     });
 
     document.getElementById('charmanderAtack').addEventListener('click', () => {
@@ -29,7 +29,7 @@ function setEvents() {
         Charmander.heal();
     });
     document.getElementById('charmanderShowLife').addEventListener('click', () => {
-        alert(`Vida de Charmander: ${Charmander.vida}`);
+        Charmander.showHealth();
     });
 
     document.getElementById('squirtleAtack').addEventListener('click', () => {
@@ -40,7 +40,7 @@ function setEvents() {
         Squirtle.heal();
     });
     document.getElementById('squirtleShowLife').addEventListener('click', () => {
-        alert(`Vida de Squirtle: ${Squirtle.vida}`);
+        Squirtle.showHealth();
     });
 
     document.getElementById('eeveeAtack').addEventListener('click', () => {
@@ -51,7 +51,7 @@ function setEvents() {
         Eevee.heal();
     });
     document.getElementById('eeveeShowLife').addEventListener('click', () => {
-        alert(`Vida de Eevee: ${Eevee.vida}`);
+        Eevee.showHealth();
     });
 
     document.querySelectorAll('.pokemon').forEach(pokemonDiv => {
