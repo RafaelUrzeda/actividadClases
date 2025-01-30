@@ -1,14 +1,12 @@
-import { Pokemon } from "./clasePokemon";
-import * as tipo from "./tiposPokemon";
-
-
+import { Pokemon } from "./clasePokemon.js";
+import * as tipo from "./tiposPokemon.js";
 
 export class Bulbasur extends tipo.PokemonAgua {
     constructor() {
         super('Bulbasur', 100, 10, 5, 10);
     }
     latigoCepa(pokemon){
-        console.log(`${this.nombre} ataca a ${pokemon.nombre} con latigo cepa`);
+        console.log(`${this.nombre} ataca a $pokemon.nombre} con latigo cepa`);
         super.specialAtack(pokemon);
     }
 }

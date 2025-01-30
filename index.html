@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batalla Pokémon</title>
-    <script src="tiposPokemon.js"></script>
+    <script type="module" src="clasePokemon.js"></script>
+    <script type="module" src="tiposPokemon.js"></script>
+    <script type="module" src="main.js"> </script>
     <style>
         body {
             display: flex;
@@ -32,8 +34,6 @@
         }
     </style>
     <script>
-        import { Eevee } from './pokemons.js'; 
-        const eevee = new Eevee();
     </script>
 </head>
 <body>
@@ -43,7 +43,7 @@
             <div class="actions">
                 <button type="button">Atacar</button>
                 <button type="button">Curar</button>
-                <button type="button" onclick="eevee.showHealth()">Motrar vida</button>
+                <button type="button" onclick="test()">Motrar vida</button>
             </div>
         </div>
         <div id="bulbasaur" class="pokemon">

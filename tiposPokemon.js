@@ -1,4 +1,4 @@
-import { Pokemon } from "./clasePokemon";
+import { Pokemon } from "./clasePokemon.js";
 
 export class PokemonFuego extends Pokemon {
     constructor(nombre, vida, ataque, defensa, velocidad) {
