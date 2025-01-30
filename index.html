@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalla Pokémon</title>
+</head>
+<body>
+    <script>
+        // Clase base: Pokemon
+        class Pokemon {
+            constructor(nombre, tipo, vida, ataque, defensa, velocidad) {
+                this.nombre = nombre;
+                this.tipo = tipo;
+                this.vida = vida;
+                this.ataque = ataque;
+                this.defensa = defensa;
+                this.velocidad = velocidad;
+            }
+
+            atacar(oponente) {
+                let daño = Math.max(5, this.ataque - oponente.defensa); // Evita daño negativo o muy bajo
+                oponente.vida -= daño;
+                console.log(`${this.nombre} ataca a ${oponente.nombre} causando ${daño} de daño.`);
+            }
+
+            curar() {
+                this.vida += 20;
+                console.log(`${this.nombre} se ha curado 20 puntos de vida.`);
+            }
+
+            mostrarVida() {
+                console.log(`${this.nombre} tiene ${this.vida} puntos de vida.`);
+            }
+        }
+
+        // Clase Pokémon de Fuego
+        class PokemonFuego extends Pokemon {
+            constructor(nombre, vida, ataque, defensa, velocidad) {
+                super(nombre, "Fuego", vida, ataque, defensa, velocidad);
+            }
+
+            atacar(oponente) {
+                super.atacar(oponente);
+                if (oponente.tipo === "Planta") {
+                    let dañoExtra = Math.max(5, this.ataque - oponente.defensa);
+                    oponente.vida -= dañoExtra;
+                    console.log(`${this.nombre} inflige ${dañoExtra} de daño extra a ${oponente.nombre} por ser de tipo Planta.`);
+                }
+            }
+        }
+
+        // Clase Pokémon de Planta
+        class PokemonPlanta extends Pokemon {
+            constructor(nombre, vida, ataque, defensa, velocidad) {
+                super(nombre, "Planta", vida, ataque, defensa, velocidad);
+            }
+
+            atacar(oponente) {
+                super.atacar(oponente);
+                if (oponente.tipo === "Agua") {
+                    let dañoExtra = Math.max(5, this.ataque - oponente.defensa);
+                    oponente.vida -= dañoExtra;
+                    console.log(`${this.nombre} inflige ${dañoExtra} de daño extra a ${oponente.nombre} por ser de tipo Agua.`);
+                }
+            }
+        }
+
+        // Clase Pokémon de Agua
+        class PokemonAgua extends Pokemon {
+            constructor(nombre, vida, ataque, defensa, velocidad) {
+                super(nombre, "Agua", vida, ataque, defensa, velocidad);
+            }
+
+            atacar(oponente) {
+                super.atacar(oponente);
+                if (oponente.tipo === "Fuego") {
+                    let dañoExtra = Math.max(5, this.ataque - oponente.defensa);
+                    oponente.vida -= dañoExtra;
+                    console.log(`${this.nombre} inflige ${dañoExtra} de daño extra a ${oponente.nombre} por ser de tipo Fuego.`);
+                }
+            }
+        }
+
+        // Creación de los Pokémon
+        let charmander = new PokemonFuego("Charmander", 100, 20, 10, 15);
+        let bulbasaur = new PokemonPlanta("Bulbasaur", 100, 18, 12, 14);
+        let squirtle = new PokemonAgua("Squirtle", 100, 19, 13, 13);
+
+        // Simulación de batalla
+        console.log("¡Empieza la batalla!");
+        charmander.atacar(bulbasaur);
+        bulbasaur.mostrarVida();
+        bulbasaur.atacar(squirtle);
+        squirtle.mostrarVida();
+        squirtle.atacar(charmander);
+        charmander.mostrarVida();
+
+        console.log("Fin de la batalla");
+    </script>
+</body>
+</html>
