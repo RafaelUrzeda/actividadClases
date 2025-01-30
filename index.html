@@ -5,24 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batalla Pokémon</title>
     <script src="tiposPokemon.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .team {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .pokemon {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .actions {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    </style>
 </head>
 <body>
+    <div id="team1" class="team">
+        <div id="eve" class="pokemon">
+            <h1>Eve</h1>
+            <div class="actions">
+                <button type="button">Atacar</button>
+                <button type="button">Curar</button>
+                <button type="button">Motrar vida</button>
+            </div>
+        </div>
+        <div id="bulbasaur" class="pokemon">
+            <h1>Bulbasaur</h1>
+            <div class="actions">
+                <button type="button">Atacar</button>
+                <button type="button">Curar</button>
+                <button type="button">Motrar vida</button>
+            </div>
+        </div>
+    </div>
+    <div id="team2" class="team">
+        <div id="squirtle" class="pokemon">
+            <h1>Squirtle</h1>
+            <div class="actions">
+                <button type="button">Atacar</button>
+                <button type="button">Curar</button>
+                <button type="button">Motrar vida</button>
+            </div>
+        </div>
+        <div id="charmander" class="pokemon">
+            <h1>Charmander</h1>
+            <div class="actions">
+                <button type="button">Atacar</button>
+                <button type="button">Curar</button>
+                <button type="button">Motrar vida</button>
+            </div>
+        </div>
+    </div>
     <script>
-        
 
-        let charmander = new PokemonFuego("Charmander", 100, 20, 10, 15);
-        let bulbasaur = new PokemonPlanta("Bulbasaur", 100, 18, 12, 14);
-        let squirtle = new PokemonAgua("Squirtle", 100, 19, 13, 13);
-
-        console.log("¡Empieza la batalla!");
-        charmander.atacar(bulbasaur);
-        bulbasaur.mostrarVida();
-        bulbasaur.atacar(squirtle);
-        squirtle.mostrarVida();
-        squirtle.atacar(charmander);
-        charmander.mostrarVida();
-
-        console.log("Fin de la batalla");
     </script>
 </body>
 </html>
