@@ -11,6 +11,7 @@
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
+            font-family: 'papyrus';
         }
 
         .team {
@@ -23,12 +24,49 @@
         .pokemon {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            padding: 50px;
+            max-width: 120px;
+            margin: 10px;
         }
         
         .actions {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+        }
+
+        #eevee {
+            background-color: brown;
+        }
+
+        #bulbasaur {
+            background-color: lightgreen;
+        }
+
+        #squirtle {
+            background-color: blue;
+        }
+
+        #charmander {
+            background-color: orange;
+        }
+
+        button {
+            margin: 2px;
+            font-weight: bold;
+        }
+
+        img {
+            width: 50px;
+        }
+
+        .atack {
+            background-color: red;
+        }
+
+        .heal {
+            background-color: green;
         }
     </style>
     <script>
@@ -39,35 +77,37 @@
         <div id="eevee" class="pokemon">
             <h1>Eevee</h1>
             <div class="actions">
-                <button type="button" class="eevee_actions">Atacar</button>
-                <button type="button" class="eevee_actions">Curar</button>
-                <button type="button" class="eevee_actions">Motrar vida</button>
+                <button class="atack" type="button" id="eeveeAtack">Atacar 🗡️</button>
+                <button class="heal" type="button" id="eeveeHeal">Curar ❤️</button>
+                <button class="show" type="button" id="eeveeShowLife">Mostrar vida</button>
             </div>
         </div>
         <div id="bulbasaur" class="pokemon">
             <h1>Bulbasaur</h1>
             <div class="actions">
-                <button type="button">Atacar</button>
-                <button type="button">Curar</button>
-                <button type="button">Motrar vida</button>
+                <button class="atack" type="button" id="bulbasaurAtack">Atacar 🗡️</button>
+                <button class="heal" type="button" id="bulbasaurHeal">Curar ❤️</button>
+                <button class="show" type="button" id="bulbasaurShowLife">Mostrar vida</button>
             </div>
         </div>
     </div>
+    <img src="./Street_fighter_-_vs.webp">
+
     <div id="team2" class="team">
         <div id="squirtle" class="pokemon">
             <h1>Squirtle</h1>
             <div class="actions">
-                <button type="button">Atacar</button>
-                <button type="button">Curar</button>
-                <button type="button">Motrar vida</button>
+                <button class="atack" type="button" id="squirtleAtack">Atacar 🗡️</button>
+                <button class="heal" type="button" id="squirtleHeal">Curar ❤️</button>
+                <button class="show" type="button" id="squirtleShowLife">Mostrar vida</button>
             </div>
         </div>
         <div id="charmander" class="pokemon">
             <h1>Charmander</h1>
             <div class="actions">
-                <button type="button">Atacar</button>
-                <button type="button">Curar</button>
-                <button type="button">Motrar vida</button>
+                <button class="atack" type="button" id="charmanderAtack">Atacar 🗡️</button>
+                <button class="heal" type="button" id="charmanderHeal">Curar ❤️</button>
+                <button class="show" type="button" id="charmanderShowLife">Mostrar vida</button>
             </div>
         </div>
     </div>

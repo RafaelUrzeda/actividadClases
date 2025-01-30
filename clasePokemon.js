@@ -8,7 +8,7 @@ export class Pokemon {
         this.velocidad = velocidad;
     }
 
-    atack(oponente) {
+    attack(oponente) {
         let daño = Math.max(5, this.ataque - oponente.defensa); 
         oponente.vida -= daño;
         console.log(`${this.nombre} ataca a ${oponente.nombre} causando ${daño} de daño.`);
