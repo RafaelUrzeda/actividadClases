@@ -2,7 +2,7 @@ import * as pokemons from './pokemons.js';
 
 addEventListener('DOMContentLoaded', setEvents);
 
-let Bulbasaur = new pokemons.Bulbasaur();
+let Bulbasaur = new pokemons.Bulbasur();
 let Charmander = new pokemons.Charmander();
 let Squirtle = new pokemons.Squirtle();
 let Eevee = new pokemons.Eevee();
@@ -59,7 +59,7 @@ function setEvents() {
             if (attackingPokemon) {
                 const targetId = pokemonDiv.id;
                 const targetPokemon = getPokemonById(targetId);
-                if (targetPokemon) {
+                if (targetPokemon && targetPokemon !== attackingPokemon) {
                     attackingPokemon.attack(targetPokemon);
                     attackingPokemon = null;
                 }
