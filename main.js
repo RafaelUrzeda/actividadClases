@@ -62,6 +62,10 @@ function setEvents() {
                 if (targetPokemon && targetPokemon !== attackingPokemon) {
                     attackingPokemon.attack(targetPokemon);
                     attackingPokemon = null;
+                    if (targetPokemon.vida <= 0) {
+                        pokemonDiv.style.backgroundColor = 'gray';
+                        pokemonDiv.querySelectorAll('button').forEach(button => button.disabled = true);
+                    }
                 }
             }
         });
