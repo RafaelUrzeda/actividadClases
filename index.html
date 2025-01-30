@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batalla Pokémon</title>
-    <script type="module" src="clasePokemon.js"></script>
-    <script type="module" src="tiposPokemon.js"></script>
-    <script type="module" src="main.js"> </script>
+    <script type="module" src="main.js"></script>
     <style>
         body {
             display: flex;
@@ -41,9 +39,9 @@
         <div id="eevee" class="pokemon">
             <h1>Eevee</h1>
             <div class="actions">
-                <button type="button">Atacar</button>
-                <button type="button">Curar</button>
-                <button type="button" onclick="test()">Motrar vida</button>
+                <button type="button" class="eevee_actions">Atacar</button>
+                <button type="button" class="eevee_actions">Curar</button>
+                <button type="button" class="eevee_actions">Motrar vida</button>
             </div>
         </div>
         <div id="bulbasaur" class="pokemon">
@@ -51,7 +49,7 @@
             <div class="actions">
                 <button type="button">Atacar</button>
                 <button type="button">Curar</button>
-                <button type="button" onclick="bulbasaur.showHealth()">Motrar vida</button>
+                <button type="button">Motrar vida</button>
             </div>
         </div>
     </div>
@@ -61,7 +59,7 @@
             <div class="actions">
                 <button type="button">Atacar</button>
                 <button type="button">Curar</button>
-                <button type="button" onclick="squirtle.showHealth()">Motrar vida</button>
+                <button type="button">Motrar vida</button>
             </div>
         </div>
         <div id="charmander" class="pokemon">
@@ -69,7 +67,7 @@
             <div class="actions">
                 <button type="button">Atacar</button>
                 <button type="button">Curar</button>
-                <button type="button" onclick="charmander.showHealth()">Motrar vida</button>
+                <button type="button">Motrar vida</button>
             </div>
         </div>
     </div>
