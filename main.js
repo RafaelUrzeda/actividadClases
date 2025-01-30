@@ -65,6 +65,7 @@ function setEvents() {
                     if (targetPokemon.vida <= 0) {
                         pokemonDiv.style.backgroundColor = 'gray';
                         pokemonDiv.querySelectorAll('button').forEach(button => button.disabled = true);
+                        checkWinner();
                     }
                 }
             }
@@ -84,5 +85,20 @@ function getPokemonById(id) {
             return Eevee;
         default:
             return null;
+    }
+}
+
+function checkWinner() {
+    const eevee =  document.getElementById('eevee');
+    const Bulbasaur =  document.getElementById('bulbasaur');
+    const squirtle = document.getElementById('squirtle');
+    const charmander = document.getElementById('charmander');
+
+    if (eevee.style.backgroundColor === 'gray' && Bulbasaur.style.backgroundColor === 'gray') {
+        alert('Los ganadores son Squirtle y Charmander');
+        location.reload();
+    } else if (squirtle.style.backgroundColor === 'gray' && charmander.style.backgroundColor === 'gray') {
+        alert('Los ganadores son Eevee y Bulbasaur');
+        location.reload();
     }
 }
