@@ -9,14 +9,16 @@ export class Pokemon {
     }
 
     attack(oponente) {
-        let daño = Math.max(5, this.ataque - oponente.defensa); 
+        let daño = Math.max(30, this.ataque - oponente.defensa); 
         oponente.vida -= daño;
+        document.getElementById(oponente.nombre + "HB").innerHTML = oponente.vida;
         console.log(`${this.nombre} ataca a ${oponente.nombre} causando ${daño} de daño.`);
     }
 
-    heal() {
-        this.vida += 20;
-        console.log(`${this.nombre} se ha curado 20 puntos de vida.`);
+    heal(efecto) {
+        this.vida += efecto;
+        document.getElementById(this.nombre + "HB").innerHTML = this.vida;
+        console.log(`${this.nombre} se ha curado ${efecto} puntos de vida.`);
     }
 
     showHealth() {

@@ -1,119 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Batalla Pokémon</title>
     <script type="module" src="main.js"></script>
     <style>
-        body {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            font-family: 'papyrus';
-        }
+      body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-family: "papyrus";
+      }
 
-        .team {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-        }
+      .team {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
 
-        .pokemon {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px;
-            max-width: 120px;
-            margin: 10px;
-        }
-        
-        .actions {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
+      .pokemon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+        max-width: 120px;
+        margin: 10px;
+      }
 
-        #eevee {
-            background-color: brown;
-        }
+      .actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
 
-        #bulbasaur {
-            background-color: lightgreen;
-        }
+      #eevee {
+        background-color: brown;
+      }
 
-        #squirtle {
-            background-color: blue;
-        }
+      #bulbasaur {
+        background-color: lightgreen;
+      }
 
-        #charmander {
-            background-color: orange;
-        }
+      #squirtle {
+        background-color: blue;
+      }
 
-        button {
-            margin: 2px;
-            font-weight: bold;
-        }
+      #charmander {
+        background-color: orange;
+      }
 
-        img {
-            width: 50px;
-        }
+      button {
+        margin: 2px;
+        font-weight: bold;
+      }
 
-        .atack {
-            background-color: red;
-        }
+      img {
+        width: 50px;
+      }
 
-        .heal {
-            background-color: green;
-        }
+      .atack {
+        background-color: red;
+      }
+
+      .heal {
+        background-color: green;
+      }
     </style>
-    <script>
-    </script>
-</head>
-<body>
+    <script></script>
+  </head>
+  <body>
     <div id="team1" class="team">
-        <div id="eevee" class="pokemon">
-            <h1>Eevee</h1>
-            <div class="actions">
-                <button class="atack" type="button" id="eeveeAtack">Atacar 🗡️</button>
-                <button class="heal" type="button" id="eeveeHeal">Curar ❤️</button>
-                <button class="show" type="button" id="eeveeShowLife">Mostrar vida</button>
-            </div>
+      <div id="eevee" class="pokemon">
+        <h1>Eevee</h1>
+        <div class="actions">
+          <button class="atack" type="button" id="eeveeAtack">Atacar 🗡️</button>
+          <button class="heal" type="button" id="eeveeHeal">Curar ❤️</button>
+          <div id="EeveeHB">100</div>
+          <select name="pocion" id="pocionEevee">
+            <option value="Pocion">Poción</option>
+            <option value="SuperPocion">Super Poción</option>
+          </select>
         </div>
-        <div id="bulbasaur" class="pokemon">
-            <h1>Bulbasaur</h1>
-            <div class="actions">
-                <button class="atack" type="button" id="bulbasaurAtack">Atacar 🗡️</button>
-                <button class="atack" type="button" id="bulbasaurAtackEspecial">Ataque especial 🗡️</button>
-                <button class="heal" type="button" id="bulbasaurHeal">Curar ❤️</button>
-                <button class="show" type="button" id="bulbasaurShowLife">Mostrar vida</button>
-            </div>
+      </div>
+      <div id="bulbasaur" class="pokemon">
+        <h1>Bulbasaur</h1>
+        <div class="actions">
+          <button class="atack" type="button" id="bulbasaurAtack">
+            Atacar 🗡️
+          </button>
+          <button class="atack" type="button" id="bulbasaurAtackEspecial">
+            Ataque especial 🗡️
+          </button>
+          <button class="heal" type="button" id="bulbasaurHeal">
+            Curar ❤️
+          </button>
+          <div id="BulbasaurHB">100</div>
+          <select name="pocion" id="pocionBulbasaur">
+            <option value="Pocion">Poción</option>
+            <option value="SuperPocion">Super Poción</option>
+          </select>
         </div>
+      </div>
     </div>
-    <img src="./Street_fighter_-_vs.webp">
+    <img src="./Street_fighter_-_vs.webp" />
 
     <div id="team2" class="team">
-        <div id="squirtle" class="pokemon">
-            <h1>Squirtle</h1>
-            <div class="actions">
-                <button class="atack" type="button" id="squirtleAtack">Atacar 🗡️</button>
-                <button class="atack" type="button" id="squirtleAtackEspecial">Ataque especial 🗡️</button>
-                <button class="heal" type="button" id="squirtleHeal">Curar ❤️</button>
-                <button class="show" type="button" id="squirtleShowLife">Mostrar vida</button>
-            </div>
+      <div id="squirtle" class="pokemon">
+        <h1>Squirtle</h1>
+        <div class="actions">
+          <button class="atack" type="button" id="squirtleAtack">
+            Atacar 🗡️
+          </button>
+          <button class="atack" type="button" id="squirtleAtackEspecial">
+            Ataque especial 🗡️
+          </button>
+          <button class="heal" type="button" id="squirtleHeal">Curar ❤️</button>
+          <div id="SquirtleHB">100</div>
+          <select name="pocion" id="pocionSquirtle">
+            <option value="Pocion">Poción</option>
+            <option value="SuperPocion">Super Poción</option>
+          </select>
         </div>
-        <div id="charmander" class="pokemon">
-            <h1>Charmander</h1>
-            <div class="actions">
-                <button class="atack" type="button" id="charmanderAtack">Atacar 🗡️</button>
-                <button class="atack" type="button" id="charmanderAtackEspecial">Ataque especial 🗡️</button>
-                <button class="heal" type="button" id="charmanderHeal">Curar ❤️</button>
-                <button class="show" type="button" id="charmanderShowLife">Mostrar vida</button>
-            </div>
+      </div>
+      <div id="charmander" class="pokemon">
+        <h1>Charmander</h1>
+        <div class="actions">
+          <button class="atack" type="button" id="charmanderAtack">
+            Atacar 🗡️
+          </button>
+          <button class="atack" type="button" id="charmanderAtackEspecial">
+            Ataque especial 🗡️
+          </button>
+          <button class="heal" type="button" id="charmanderHeal">
+            Curar ❤️
+          </button>
+          <div id="CharmanderHB">100</div>
+          <select name="pocion" id="pocionCharmander">
+            <option value="Pocion">Poción</option>
+            <option value="SuperPocion">Super Poción</option>
+          </select>
         </div>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>
